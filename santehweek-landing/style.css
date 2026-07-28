@@ -285,30 +285,28 @@ details p { margin: -4px 0 22px; color: var(--muted); font-size: 14px; line-heig
   .reveal { opacity: 1; transform: none; }
 }
 
-/* ===== Service Area Banner ===== */
-
-.service-area-banner {
-    background: #ECFDF3;
-    border-top: 1px solid #D1FAE5;
-    border-bottom: 1px solid #D1FAE5;
-    padding: 14px 20px;
-    text-align: center;
+.hero-location{
+    display:inline-flex;
+    align-items:center;
+    margin:18px 0 22px;
+    padding:12px 18px;
+    background:#ECFDF3;
+    border:1px solid #BBF7D0;
+    border-radius:14px;
+    color:#166534;
+    font-size:15px;
+    font-weight:500;
+    line-height:1.5;
 }
 
-.service-area-banner p {
-    margin: 0;
-    font-size: 16px;
-    font-weight: 500;
-    color: #065F46;
-    line-height: 1.5;
+.hero-location strong{
+    color:#15803D;
 }
 
-.service-area-banner strong {
-    color: #047857;
-}
-
-@media (max-width: 768px) {
-    .service-area-banner p {
-        font-size: 14px;
+@media (max-width:768px){
+    .hero-location{
+        display:block;
+        font-size:14px;
+        padding:10px 14px;
     }
 }
