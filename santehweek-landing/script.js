@@ -33,18 +33,26 @@ hintClose?.addEventListener('click', () => {
   floatingHint?.remove();
 });
 
-// Meta Pixel o'rnatilganda barcha bot tugmalarini kuzatish
-// Pixel kodi keyin qo'shiladi. Bu kod fbq mavjud bo'lsa avtomatik event yuboradi.
+// Meta Pixel: Telegram bot tugmalarini kuzatish
 document.querySelectorAll('.track-bot').forEach((button) => {
   button.addEventListener('click', () => {
-    const eventName = button.dataset.track || 'TelegramBotClick';
+    if (typeof window.fbq !== 'function') return;
 
-    if (typeof window.fbq === 'function') {
-      window.fbq('trackCustom', eventName, {
-        destination: 'telegram_bot',
-        button_text: button.textContent.trim()
-      });
-    }
+    const eventName = button.dataset.track || 'TelegramBotClick';
+    const buttonText = button.textContent.trim();
+
+    // Meta standart eventi
+    window.fbq('track', 'Contact', {
+      content_name: 'SantehWeek Telegram Bot',
+      contact_method: 'telegram',
+      button_text: buttonText
+    });
+
+    // Qaysi tugma bosilganini alohida ko‘rsatadi
+    window.fbq('trackCustom', eventName, {
+      destination: 'telegram_bot',
+      button_text: buttonText
+    });
   });
 });
 
@@ -58,3 +66,4 @@ faqItems.forEach((item) => {
     });
   });
 });
+
