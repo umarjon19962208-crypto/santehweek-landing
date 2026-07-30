@@ -3,7 +3,7 @@ SANTEHWEEK LANDING PAGE
 1. Papkani VS Code orqali oching.
 2. index.html faylini Live Server bilan ishga tushiring.
 3. Bot manzilini o'zgartirish uchun barcha fayllarda quyidagini almashtiring:
-   https://t.me/santehweek_bot
+   https://t.me/santehweek_bot?start=landing
 4. Telefon raqami index.html oxiridagi footer qismida joylashgan.
 5. Meta Pixel va CAPI keyingi bosqichda domen/hosting tayyor bo'lganda ulanadi.
 
