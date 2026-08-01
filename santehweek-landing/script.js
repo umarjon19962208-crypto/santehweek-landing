@@ -1,5 +1,7 @@
 'use strict';
 
+// SantehWeek tracking va UI — diskda saqlangan versiya: 2026-08-01
+
 const yearElement = document.getElementById('year');
 if (yearElement) yearElement.textContent = new Date().getFullYear();
 
